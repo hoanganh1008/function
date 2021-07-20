@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check(n) {
+        let flag = true
+        if (n < 2) {
+            flag = false
+        } else {
+            for (i = 2; i < n; i++) {
+                if (n % i === 0) {
+                    return false;
+                }
+            }
+        }
+        return flag
+    }
+
+    function display() {
+        let count = 0
+        n = 2
+        while (count < 10000) {
+            if (check(n) === true) {
+
+                count++
+                document.write(n+",")
+            }
+            n++
+        }
+    }
+
+    display()
+
+</script>
+</body>
+</html>
